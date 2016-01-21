@@ -1,0 +1,24 @@
+ALL INSERTED WORDS: 
+
+lol
+rekt
+calc
+nope
+lolol
+hello
+0
+ALL SEARCHED WORDS: 
+nope is present in the hashtable.
+lolol is present in the hashtable.
+aljksf is NOT present in the hashtable.
+0 is present in the hashtable.
+ALL ATTEMPTED DELETED WORDS: 
+lol was deleted in the hashtable.
+hello was deleted in the hashtable.
+0 was deleted in the hashtable.
+ALL WORDS IN HASHTABLE: 
+
+lolol
+rekt
+calc
+nope
