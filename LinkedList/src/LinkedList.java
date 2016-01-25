@@ -215,7 +215,7 @@ public class LinkedList<Generic> {
 				output+=" " + temp.getInfo() + " ";//add the info to the the output
 				temp=temp.getNextnode();
 			}
-			output+= " " + tail.getInfo() + " ";// I dont know why I have to do this
+			output+= " " + tail.getInfo() + " ";
 		}
 		else
 			output="NULL";
