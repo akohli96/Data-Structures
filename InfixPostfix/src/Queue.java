@@ -94,12 +94,13 @@ public class Queue<Generic> {
 		String output="";
 		Node temp=head;
 		if(!isEmpty()){
-			while(temp.getNextnode()!=head){//loop through the entire list
+			//temp.getNextnode()!=head
+			while(temp.getNextnode()!=null){//loop through the entire list
 				//System.out.println(temp.getInfo());
 				output+=" " + temp.getInfo() + " ";//add the info to the the output
 				temp=temp.getNextnode();
 			}
-			output+= " " + tail.getInfo() + " ";// I dont know why I have to do this
+		
 		}
 		else
 			output="";
