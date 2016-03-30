@@ -36,7 +36,7 @@ public class LinkedList<Generic> {
 		//If there is no node
 		if(head==null){
 			head=temp;
-			tail=head;
+			tail=temp;
 		}
 
 		else{
@@ -70,7 +70,6 @@ public class LinkedList<Generic> {
 	//Output:Nothing
 	public void addTotail(Generic info){
 		Node newtail= new Node<Generic>(head, info);//make newtail point to head and store data
-		Node temp=head;//create temp point to head
 		//Basically like add to head
 		if(isEmpty()){
 			head=newtail;
@@ -210,12 +209,11 @@ public class LinkedList<Generic> {
 		String output="";
 		Node temp=head;
 		if(!isEmpty()){
-			while(temp.getNextnode()!=head){//loop through the entire list
+			while(temp.getNextnode()!= null){//loop through the entire list
 				//System.out.println(temp.getInfo());
 				output+=" " + temp.getInfo() + " ";//add the info to the the output
 				temp=temp.getNextnode();
 			}
-			output+= " " + tail.getInfo() + " ";
 		}
 		else
 			output="NULL";
