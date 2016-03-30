@@ -42,9 +42,17 @@ public class Queue<Generic> {
 	//Output:Nothing
 	public void enQ(Generic info){
 		Node newtail= new Node<Generic>(head, info);//make newtail point to head and store data
-		Node temp=head;//create temp point to head
 		//Basically like add to head
 		if(isEmpty()){
+		/*
+		head=newtail;
+		head.setNextnode(head) //Should I really even have this
+		tail=head
+		*/
+		/*
+		Also I am not using tail at all in this if branch, if head's references are being played with and tail is 
+		head, it should not break.
+		*/
 			head=newtail;
 			newtail.setNextnode(head);
 			tail=head;
