@@ -22,11 +22,11 @@ public class WordAnalytics {
 	}
 
 
-	public static void main(String[] args) throws IOException{
+	public static void main(String[] args) {
 
 		BinaryTree<Word> book = new BinaryTree<Word>();
 
-		String filename="GreatExpectations_Dickens.txt";
+		String filename="HuckleBerry.txt";
 
 		Scanner scan = null;
 
@@ -36,9 +36,12 @@ public class WordAnalytics {
 		File file = new File(filename);
 		try {
 			scan = new Scanner(file);
+			System.out.println(scan);
+                        //System.out.println("Inside try");
 		} catch (FileNotFoundException e) {
+                       System.out.println(e);
 		}
-
+                System.out.println(file);
 		// The delimeter and the tokenizer are constructed
 		String delim="! @#$%^&*()_+-=/*-+.,.;[]\\<>?:{}\"";
 		StringTokenizer tokenizer;
@@ -50,6 +53,7 @@ public class WordAnalytics {
 		//Create new tokenizer
 		//Get the next word
 		//Store in a temp reference
+//                System.out.println(scan.hasNextLine());
 		while(scan.hasNextLine()){
 			tokenizer = new StringTokenizer(scan.nextLine(), delim);
 			while (tokenizer.hasMoreElements()) {
@@ -102,10 +106,10 @@ public class WordAnalytics {
 
 		System.out.println("The total number of words detected : " + numOfwords);
 		System.out.println("The total number of unique words detected : " + book.getNodes());
-		
+
 		System.out.println();
-		
-		
+
+
 		System.out.println("The five most frequent words were :");
 		for(int i=Sorted.length-1;i>Sorted.length-6;i--){
 			System.out.println(Sorted[i]);
@@ -123,7 +127,14 @@ public class WordAnalytics {
 		System.out.println("Enter 2 to see output the frequency analysis to a file");
 
 		//Create the object to write to the file
-		PrintWriter outputWriter = new PrintWriter(new BufferedWriter(new FileWriter(outputFile)));
+		PrintWriter outputWriter = null;
+		try {
+			outputWriter = new PrintWriter(new BufferedWriter(new FileWriter(outputFile)));
+		//	System.out.println(scan);
+	} catch (IOException e) {
+
+		}
+
 		int choice = input.nextInt();
 		String word=null;
 
@@ -175,9 +186,9 @@ public class WordAnalytics {
 				}
 				System.out.println("DONE!");
 			}
-			
-			
-			
+
+
+
 		}
 
 
