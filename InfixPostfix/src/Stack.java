@@ -112,12 +112,12 @@ public class Stack<Generic> {
 		String output="";
 		Node temp=head;
 		if(!isEmpty()){
-			while(temp.getNextnode()!=head){//loop through the entire list
+			while(temp.getNextnode()!=null){//loop through the entire list
 				//System.out.println(temp.getInfo());
 				output+=" " + temp.getInfo() + " ";//add the info to the the output
 				temp=temp.getNextnode();
 			}
-			output+= " " + tail.getInfo() + " ";
+			//output+= " " + tail.getInfo() + " ";
 		}
 		else
 			output="";
